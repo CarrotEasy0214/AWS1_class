@@ -1,0 +1,71 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판 목록</title>
+    <link href="board.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="box">
+        <aside class="side_menu">
+          <td class="side_menu1">
+            <ul class="side_menu_list">
+              <li class="side_menu_items">
+                <a href="#">훈련과정</a>
+              </li>
+              <li class="side_menu_items">
+                <a href="#">공지사항</a>
+              </li>
+              <li class="side_menu_items">
+                <a href="#">건의함</a>
+              </li>
+              <li class="side_menu_items">
+                <a href="#">채용정보</a>
+              </li>
+              <li class="side_menu_items">
+                <a href="#">로그아웃</a>
+              </li>
+              <li class="side_menu_items">
+                <a href="#">Version2 바로가기</a>
+              </li>
+            </ul>
+          </td>
+        </aside>
+        <div class="board_list_wrap">
+          <table class="board_list">
+            <caption>
+              글쓰기
+            </caption>
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td class="divide">제목</td>
+                <td class="text">
+                  <input type="text" placeholder="제목을 입력하세요" />
+                </td>
+              </tr>
+              <tr>
+                <td class="divide">내용</td>
+                <td colspan="3 " class="text">
+                  <input
+                    type="text"
+                    placeholder="내용을 입력하세요"
+                    id="content"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="write1">
+            <span class="own"> </span>
+            <span class="menu">
+              <a href="#" class="write_btn">등록</a>
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

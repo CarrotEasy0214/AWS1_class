@@ -1,0 +1,27 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><%= name %></p>
+    <%- elem %>
+    <p>
+      &lt%= 는 innerText이고<br />
+      &lt%- 는 innerhtml이다
+    </p>
+    <% let a = 1; %>
+    <p><%= a %></p>
+
+    <% if(a < 10){ %>
+    <div>a는 10보다 작아요</div>
+    <% } %>
+
+    <% if(a > 10){ %>
+    <div>a는 10보다 커요</div>
+    <% } %>
+  </body>
+</html>
