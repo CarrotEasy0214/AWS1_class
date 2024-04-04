@@ -36,7 +36,7 @@ app.use("/write", (req, res, next) => {
   next();
 });
 
-// post(path:String, ...callback:Array(function))
+// post(path:String, ...callback:Array(function))s
 app.post("/write", upload.array("img"), (req, res) => {
   console.log(req.headers);
   //   console.log(req.cookies);
