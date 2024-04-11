@@ -186,6 +186,8 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234qwer
 ALTER USER 'root'@'localhost' IDENTIFIED BY '1234qwer';
 ```
 
+- ALTER 를 CREATE로 변경하면 계정생성
+
 # mysql 종료
 
 ```sql
