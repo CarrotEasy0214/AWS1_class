@@ -18,6 +18,7 @@ user {
 
 order {
 order_id UNSIGNED_INT PK "auto_increment/주문번호"
+item_id number "not null/상품번호"
 id number "not null/회원번호"
 pay_status varchar(10) "not null/결제여부"
 order_date datetime "not null/주문일"
@@ -42,6 +43,7 @@ item_reg_date datetime "not null/등록일"
 item_mod_date datetime "수정일"
 item_del_date datetime "삭제일"
 }
+item ||--o{ order : item_id
 
 order_detail {
 order_detail_id UNSIGNED_INT PK "auto_increment/주문상세번호"
@@ -54,11 +56,11 @@ order_mod_date datetime "수정일"
 order_del_date datetime "삭제일"
 }
 
-item ||--o{ order_detail : item_id
-order_detail ||--o{ order : order_id
+order_detail ||--|| order : order_id
 
 cart{
 cart_id UNSIGNED_INT PK "auto_increment/장바구니"
+order_id number "주문번호"
 id number "not null/회원번호"
 item_id number "not null/상품번호"
 buy_quantity number "not null/구매수량"
@@ -66,18 +68,21 @@ cancel_status varchar(10) "not null/취소여부"
 }
 
 cart ||--o{ item : item_id
-cart ||--o{ user : id
+user ||--o{ cart : id
+cart ||--|| order : order_id
 
 qna_board{
 qna_board_id UNSIGNED_INT PK "auto_increment/QnA번호"
 id number "not null/회원번호"
+item_id number "상품번호"
 title varchar(50) "not null/제목"
 qna_board_reg_date datetime "not null/등록일"
 qna_board_mod_date datetime "수정일"
 qna_board_del_date datetime "삭제일"
 contents text "not null/글내용"
 }
-qna_board ||--o{ user : id
+user ||--o{ qna_board : id
+item ||--o{ qna_board : item_id
 
 qna_reply{
 qna_reply_id UNSIGNED_INT PK "auto_increment/QnA답글 번호"
@@ -88,8 +93,8 @@ qna_reply_reg_date datetime "not null/등록일"
 qna_reply_mod_date datetime "수정일"
 qna_reply_del_date datetime "삭제일"
 }
-qna_reply ||--o{ qna_board : qna_board_id
-qna_reply ||--o{ user : id
+qna_reply ||--|| qna_board : qna_board_id
+user ||--|| qna_reply : id
 
 review_board{
 qna_board_id UNSIGNED_INT PK "auto_increment/리뷰번호"
@@ -103,8 +108,8 @@ review_img varchar(50) "리뷰이미지"
 contents text "not null/리뷰내용"
 }
 
-review_board ||--o{ item : item_id
-review_board ||--o{ user : id
+item ||--o{ review_board : item_id
+user ||--o{ review_board : id
 
 review_reply{
 review_reply_id UNSIGNED_INT PK "auto_increment/리뷰답글번호"
@@ -116,7 +121,7 @@ review_reply_mod_date datetime "수정일"
 review_reply_del_date datetime "삭제일"
 }
 
-review_reply ||--o{ review_board : review_board_id
-review_reply ||--o{ user : id
+review_board ||--|| review_reply : review_board_id
+user ||--|| review_reply : id
 
 ```
