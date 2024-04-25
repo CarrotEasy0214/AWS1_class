@@ -1,5 +1,5 @@
 {
-  "name": "240419_1",
+  "name": "240419",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -13,10 +13,6 @@
     "nodemon": "^3.1.0"
   },
   "dependencies": {
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "morgan": "^1.10.0",
     "mysql": "^2.18.1"
   }
 }
