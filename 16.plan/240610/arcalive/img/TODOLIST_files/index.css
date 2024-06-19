@@ -1,0 +1,358 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(36, 199, 144);
+}
+
+input {
+  padding-left: 10px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.container {
+  height: 45.8vw;
+}
+
+.todolist {
+  width: 1200px;
+  height: 630px;
+  background-color: rgb(237, 241, 243);
+  border-radius: 25px;
+  margin: 35px;
+}
+
+.left-nav {
+  margin: 23px 20px 20px 20px;
+  flex: 1;
+}
+
+.hamburger-svg {
+  width: 26.5px;
+  color: rgb(36, 199, 144);
+}
+
+.project-name {
+  font-size: 28px;
+  color: rgb(36, 199, 144);
+  font-weight: 900;
+  margin-left: 20px;
+}
+
+.center-nav {
+  background-color: rgb(201, 244, 233);
+  width: 100px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 25px;
+  gap: 15px;
+  box-shadow: 3px 3px 3px rgb(162, 218, 202) inset;
+}
+
+.icon-1 {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.svgicon {
+  width: 23px;
+  height: 23px;
+  fill: rgb(36, 199, 144);
+  color: rgb(176, 204, 191);
+}
+
+.svgicon1 {
+  width: 23px;
+  height: 23px;
+  fill: rgb(176, 204, 191);
+  color: rgb(36, 199, 144);
+}
+
+.right-nav {
+  width: 450px;
+  height: 45px;
+  margin: 20px 20px 0px 10px;
+  flex: 1;
+  background-color: white;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 2px 2px 1px rgb(214, 216, 225) inset;
+}
+
+.all {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.total {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(201, 244, 233);
+  width: 150px;
+  height: 25px;
+  border-radius: 25px;
+  padding-top: 7px;
+  color: rgb(49, 198, 182);
+  box-shadow: 1px 3px 5px rgb(155, 214, 197);
+}
+
+.working {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.two {
+  margin-left: 20px;
+  color: rgb(49, 198, 182);
+  background-color: rgb(201, 244, 233);
+  width: 20px;
+  border-radius: 25px;
+}
+
+.num-1 {
+  padding-left: 5px;
+  padding-top: 0px;
+}
+
+.done {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.zero {
+  margin-left: 20px;
+  color: rgb(49, 198, 182);
+  background-color: rgb(201, 244, 233);
+  width: 20px;
+  border-radius: 25px;
+}
+
+.num-2 {
+  padding-left: 5px;
+  padding-top: 0px;
+}
+
+.contents {
+  display: flex;
+}
+
+.write {
+  background-color: rgb(48, 187, 132);
+  width: 280px;
+  height: 490px;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+.title {
+  padding: 25px 25px 0px 25px;
+}
+
+.write-title {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.input-title {
+  width: 220px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 10px;
+}
+
+.title-length {
+  color: white;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 10px 5px 10px 0px;
+}
+
+.content {
+  padding: 0px 25px 10px 25px;
+}
+
+.input-content {
+  width: 220px;
+  height: 170px;
+  border-radius: 20px;
+  border: none;
+  padding-top: 6px;
+  padding-left: 10px;
+}
+
+.content-length {
+  color: white;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 10px 5px 0px 0px;
+}
+
+.add {
+  margin: 0px 0px 0px 25px;
+  width: 235px;
+  height: 35px;
+  background-color: rgb(49, 190, 134);
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px rgb(32, 148, 98), -3px -3px 5px rgb(60, 215, 149);
+}
+
+.content-box {
+  display: flex;
+  margin-left: 20px;
+  gap: 15px;
+}
+
+.content-box1 {
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 15px;
+}
+
+.box {
+  width: 420px;
+  height: 110px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.box-list {
+  width: 860px;
+  height: 100px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.list {
+  display: flex;
+  flex: 1;
+  margin: 15px;
+}
+
+.list1 {
+  display: flex;
+  flex: 1;
+  margin: 0px 15px 0px 15px;
+}
+
+.list2 {
+  margin: 15px;
+}
+
+.circle {
+  margin-right: 330px;
+}
+
+.circle1 {
+  margin-left: 10px;
+  margin-top: 33px;
+  flex: 1;
+}
+
+.num {
+  width: 17px;
+  height: 15px;
+  background-color: rgb(49, 190, 134);
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  border-radius: 18px;
+}
+
+.num1 {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(49, 190, 134);
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.board {
+  flex: 1;
+  text-align: center;
+}
+
+.check {
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  fill: rgb(181, 181, 181);
+}
+
+.delete {
+  width: 14px;
+  height: 14px;
+  fill: rgb(181, 181, 181);
+}
+
+.list-title {
+  font-weight: 900;
+  margin: 15px 15px 5px 15px;
+}
+
+.list-content {
+  margin: 0px 15px 5px 15px;
+  font-size: 14px;
+  color: rgb(85, 85, 85);
+}
+
+.list-title1 {
+  margin-top: 25px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.list-content1 {
+  margin-top: 5px;
+  font-size: 16px;
+  color: rgb(85, 85, 85);
+}
+
+.check-delete {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  flex: 1;
+  gap: 20px;
+}
+
+.check1 {
+  width: 30px;
+  height: 30px;
+  fill: rgb(181, 181, 181);
+  margin: 30px 0px 0px 180px;
+}
+
+.delete1 {
+  width: 26px;
+  height: 26px;
+  fill: rgb(181, 181, 181);
+  margin: 30px 0px 0px 0px;
+}
