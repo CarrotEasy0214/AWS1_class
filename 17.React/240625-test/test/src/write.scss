@@ -1,0 +1,42 @@
+.input-title {
+  display: flex;
+  line-height: 50px;
+  width: 100%;
+  border-top: 2px solid rgb(181, 181, 181);
+  border-bottom: 2px solid rgb(181, 181, 181);
+  background-color: gainsboro;
+}
+
+.sub-title {
+  margin: 0 10px 0 20px;
+}
+
+.input-title > input {
+  height: 20px;
+  width: 1400px;
+  margin: 13px;
+  padding-left: 5px;
+}
+
+.input-content {
+  display: flex;
+  line-height: 100%;
+  width: 100%;
+  border-top: 2px solid rgb(181, 181, 181);
+  border-bottom: 2px solid rgb(181, 181, 181);
+  margin-top: 10px;
+  background-color: gainsboro;
+}
+
+.sub-content {
+  margin: 0 10px 0 20px;
+  line-height: 400px;
+}
+
+.input-content > textarea {
+  height: 380px;
+  width: 1400px;
+  margin: 13px;
+  resize: none;
+  padding-left: 5px;
+}

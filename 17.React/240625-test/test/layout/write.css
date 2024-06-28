@@ -1,0 +1,73 @@
+*,
+html {
+  margin: 0;
+}
+
+.board-name {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 30px 0px 20px 40px;
+}
+
+.list-wrap {
+  margin: 40px;
+  width: 1600px;
+}
+
+.input-title {
+  display: flex;
+  line-height: 50px;
+  width: 100%;
+  border-top: 2px solid rgb(181, 181, 181);
+  border-bottom: 2px solid rgb(181, 181, 181);
+  background-color: gainsboro;
+}
+
+.sub-title {
+  margin: 0 10px 0 20px;
+}
+
+.input-title > input {
+  height: 20px;
+  width: 1500px;
+  margin: 13px;
+  padding-left: 5px;
+}
+
+.input-content {
+  display: flex;
+  line-height: 100%;
+  width: 100%;
+  border-top: 2px solid rgb(181, 181, 181);
+  border-bottom: 2px solid rgb(181, 181, 181);
+  margin-top: 10px;
+  background-color: gainsboro;
+}
+
+.sub-content {
+  margin: 0 10px 0 20px;
+  line-height: 480px;
+}
+
+.input-content > textarea {
+  height: 480px;
+  width: 1500px;
+  margin: 13px;
+  resize: none;
+  padding-left: 5px;
+}
+
+.btn {
+  margin-right: 80px;
+  float: right;
+}
+
+.submit {
+  width: 80px;
+  height: 40px;
+  background-color: rgb(72, 186, 228);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
