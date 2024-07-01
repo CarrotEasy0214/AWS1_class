@@ -1,9 +1,9 @@
 import { Route, Routes, Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, ChangeEvent, useCallback } from "react";
 import Root from "./Components/Root";
 import Board from "./Components/Board";
 import Write from "./Components/Write";
-import { useParams } from "react-router-dom";
+import { IProps } from "./Components/Write";
 
 export interface IList {
   num: number;
@@ -17,6 +17,8 @@ export interface IList {
 function App() {
   const loca = useLocation();
   console.log(loca);
+
+  const [num, setNum] = useState<number>(11);
 
   const [titlelists, setTitlelists] = useState<IList[]>([
     {
@@ -101,6 +103,42 @@ function App() {
     },
   ]);
 
+  // const [inputs, setInputs] = useState({
+  //   num: 0,
+  //   title: "",
+  //   writer: "박성민",
+  //   date: "24-06-27",
+  //   like: 0,
+  //   content: "",
+  // });
+
+  const handleWrite = (title: string, content: string): void => {
+    // console.log("Title:", title);
+    // console.log("Content:", content);
+    // const copy = [...titlelists];
+    // copy.unshift({
+    //   num,
+    //   title,
+    //   writer: "박성민",
+    //   date: "24-06-27",
+    //   like: 0,
+    //   content,
+    // });
+    setTitlelists([
+      {
+        num,
+        title,
+        writer: "박성민",
+        date: "24-06-27",
+        like: 0,
+        content,
+      },
+      ...titlelists,
+    ]);
+    // setTitlelists(copy);
+    setNum(num + 1);
+  };
+
   return (
     <div>
       <nav className="nav">
@@ -134,7 +172,7 @@ function App() {
           path="/board/:num"
           element={<Board BoardList={titlelists} />}
         ></Route>
-        <Route path="/write" element={<Write />}></Route>
+        <Route path="/write" element={<Write add={handleWrite} />}></Route>
       </Routes>
     </div>
   );

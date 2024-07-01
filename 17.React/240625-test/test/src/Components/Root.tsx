@@ -50,7 +50,7 @@ const Root: FC<IRoot> = ({ titleLists }) => {
       </div>
       <div className="mr-10 float-right">
         <button className="w-20 h-10 bg-cyan-300 border-0 rounded text-white">
-          글쓰기
+          <Link to={"/write"}>글쓰기</Link>
         </button>
       </div>
     </div>
