@@ -1,13 +1,20 @@
 import { FC } from "react";
+// 리액트에서 FC기능을 불러옴
 import { IList } from "../App";
+// 앱파일에서 IList 인터페이스를 연결함
 import { useParams } from "react-router-dom";
+// 리액트-라우터-돔에서 useParams기능을 불러옴
 
 export interface IBoard {
   BoardList: IList[];
 }
+// IBoard라는 인터페이스를 만들고 외부에서 받을수있게 export해줌
+// BoardList는 IList의 배열이다
 
 const Board: FC<IBoard> = ({ BoardList }) => {
+  // Board라는 함수를 실행 , IBoard라는 props를 타입으로가짐
   const params = useParams();
+  // paramas라는 상수를 선언한뒤 파라미터 정보를 가져온다.
   // const num = params.num ? +params.num : 0;
   // const board = BoardList[BoardList.length - +num] as IList;
   const board = BoardList.find((item) => `${item.num}` === params.num) as IList;
